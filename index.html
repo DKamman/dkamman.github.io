@@ -1,28 +1,104 @@
 <!DOCTYPE html>
-<html lang="nl">
-	<head>
-		<title>Wie ben ik?</title>
-		<meta charset="UTF-8"> 
-		<link rel="icon" type="image/ico" href="Images/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="CSS/style.css">		
-	</head>
-	<body>
-		<div class="topnav">			
-			<a class="active" href="index.html">- Home -</a>
-			<a href="vooropleiding.html">- Vooropleiding en Bijbaan -</a>
-			<a href="opleiding.html">- Opleiding -</a>
+<html>
+<head>
+	<title>RW</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+	
+	<div id="topnav">
+		<div id="button" onclick="topButton()">
+			<div class="button-line"></div>
+			<div class="button-line"></div>
+			<div class="button-line"></div>
 		</div>
-		<div class="intro1">
-			<p><img id="me" src="Images/me.jpg" alt="een foto van mij">Welkom op mijn Portfolio website. Ik ben Danny Kamman. Student aan het Da Vinci College in Dordrecht. Ik volg hier de opleiding Applicatie- en Mediaontwikkelaar. Ik ben 22 jaar oud.</br></br>
 
-			Ik ben spontaan en sociaal. Ik kan goed praten en teamgericht werken maar ook stil zijn en zelfstandig aan de slag gaan. Ik probeer altijd mijn best te doen en mijzelf te verbeteren waar ik kan.<br><br>
+		<nav id="upperbar">
+			<ul id="myLinks">
+				<li class="uplinks"><i class="fas fa-phone"></i> (06) --- --- --</li>
+				<li class="uplinks"><i class="fab fa-whatsapp"></i> (06) --- --- --</li>
+				<li class="uplinks"><i class="far fa-clock"></i> Ma - Zo: 8:00 - 22:00</li>
+				<li class="uplinks"><i class="fas fa-tachometer-alt"></i> <a href="#">Dashboard</a></li>
+				<li class="uplinks"><a href="#"><i class="fab fa-facebook"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-twitter-square"></i></a></li>
+			</ul>
+		</nav>
+	</div>
 
-			Ik sport graag. Vaak in de vormen van fitness en verschillende dansstijlen.
-
-
-			</p>
+	<div id="bottomnav">
+		<div id="button2" onclick="botButton()">
+			<div class="button-line2"></div>
+			<div class="button-line2"></div>
+			<div class="button-line2"></div>
 		</div>
-				
-		
-	</body>
+
+		<nav id="lowerbar">
+			<ul id="myBLinks">
+				<li class="downlinks"><a href="#">AUTORIJBEWIJS</a></li>
+				<li class="downlinks"><a href="#">MOTORRIJBEWIJS</a></li>
+				<li class="downlinks"><a href="#">THEORIELES</a></li>
+				<li class="downlinks"><a href="#">OPFRIS CURSUS</a></li>
+				<li class="downlinks"><a href="#">CONTACT</a></li>
+			</ul>
+		</nav>
+	</div>
+
+<div class="w3-content w3-display-container" style="max-width:1920px">
+  <img class="mySlides" src="img/img1.jpeg" style="width:100%">
+  <img class="mySlides" src="img/img2.jpeg" style="width:100%">
+  <img class="mySlides" src="img/img3.jpg" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <!-- <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div> -->
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<div id="midpage">
+	<div id="proefles">
+		<h1><i class="fas fa-car-side"></i> PROEFLES</h1><hr>
+		<p id="topDes" class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<button id="gratis">GRATIS proefles</button>
+	</div>
+	
+	<div id="locaties">
+		<h1><i class="fas fa-map"></i> LOCATIES</h1><hr>
+		<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+
+	<div id="rijlessen">
+		<h1><i class="fas fa-car-side"></i> RIJLESSEN</h1><hr>
+		<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+
+	<div id="video">
+		 <iframe src="https://www.youtube.com/embed/-LIhqaqeXUU" > </iframe> 
+	</div>	
+</div>
+
+<footer>Danny Kamman</footer>
+
+<script type="text/javascript" src="js/js.js"></script>
+</body>
 </html>
