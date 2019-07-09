@@ -17,6 +17,7 @@
     <title>DK - Homepage</title>
   </head>
   <body>
+
     <?php include "inc/nav.html" ?>
 
     <div id="mainpage" class="container-fluid">
