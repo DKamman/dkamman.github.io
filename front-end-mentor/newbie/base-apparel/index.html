@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+
+    <script>
+      const btn = document.querySelector(".btn");
+      const form = document.querySelector(".form")
+
+      btn.addEventListener("click", () => {
+        form.classList.add('invalid');
+      })
+    </script>
+
+    <main>
+
+      <div class="container">
+
+        <div class="background">
+          <img src="images/bg-pattern-desktop.svg" alt="">
+        </div>
+
+        <div class="header">
+          <img src="images/logo.svg" alt="">
+        </div>
+
+        <div class="hero">
+          <img src="https://picsum.photos/600/400" alt="Hero image">
+        </div>
+
+        <div class="content">
+          <h1><span>We're</span><br>coming<br>soon</h1>
+
+            <p>
+              Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
+            </p>
+
+          <form action="" class="form">
+            <input class="input-mail" type="email" placeholder="Email Address" required>
+            <button class="btn" type="submit"><img src="images/icon-arrow.svg" alt="Submit button"></button>
+          </form>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="https://dannykamman.com">Danny Kamman</a>.
+    </footer>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+      .attribution { font-size: 0.6875rem; text-align: center; width: 100%; padding: 8px 0; display: flex; justify-content: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+
+      :root {
+        --pink: hsl(0, 36%, 70%);
+        --red: hsl(0, 93%, 68%);
+
+        --white-gradient: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%);
+        --pink-gradient: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+        font-family: "Josefin Sans", sans-serif;
+      }
+
+      html {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 96px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 48px;
+        color: var(--pink);
+      }
+
+      main {
+        position: relative;
+        min-height: 100vh;
+        height: 100vh;
+      }
+
+      .container {
+        padding: 0 140px;
+        width: 60vw;
+
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      .background {
+        position: absolute;
+        inset: 0;
+        width: 60vw;
+        overflow: clip;
+        z-index: -1;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .header {
+        padding: 48px 0;
+      }
+
+      .hero {
+        position: absolute;
+        top: 0;
+        left: 60vw;
+        width: 40vw;
+        height: 100%;
+        overflow: clip;
+
+        img {
+          height: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        flex: 1;
+        h1 {
+          font-weight: 600;
+          letter-spacing: 24px;
+          
+          span {
+            font-weight: 300;
+            color: var(--pink);
+          }
+        }
+      }
+
+      .form {
+        display: flex;
+        width: 100%;
+
+        position: relative;
+      }
+
+      .btn {
+        padding: 12px 32px;
+        border: none;
+        border-radius: 99px;
+        background: var(--pink-gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        right: 0;
+      }
+
+      .input-mail {
+        border: 1px solid var(--pink);
+        color: var(--pink);
+        margin: 0;
+        border-radius: 99px;
+        width: calc(100% + 39px);
+        padding: 0 100px 0 24px;
+        height: 44px;
+
+        &::placeholder {
+          color: var(--pink);
+        }
+      }
+    </style>
+  </body>
+</html>
