@@ -9,16 +9,6 @@
     <title>Frontend Mentor | Base Apparel coming soon page</title>
   </head>
   <body>
-
-    <script>
-      const btn = document.querySelector(".btn");
-      const form = document.querySelector(".form")
-
-      btn.addEventListener("click", () => {
-        form.classList.add('invalid');
-      })
-    </script>
-
     <main>
 
       <div class="container">
@@ -32,7 +22,7 @@
         </div>
 
         <div class="hero">
-          <img src="https://picsum.photos/600/400" alt="Hero image">
+          <img src="images/hero-desktop.jpg" alt="Hero image">
         </div>
 
         <div class="content">
@@ -43,8 +33,14 @@
             </p>
 
           <form action="" class="form">
-            <input class="input-mail" type="email" placeholder="Email Address" required>
-            <button class="btn" type="submit"><img src="images/icon-arrow.svg" alt="Submit button"></button>
+            <div class="form__inner">
+              <input class="input-mail" type="email" placeholder="Email Address" required>
+              <div class="form__absolute">
+                <img src="images/icon-error.svg" alt="error-icon" class="form__error-icon">
+                <button class="btn" type="submit"><img src="images/icon-arrow.svg" alt="Submit button"></button>
+              </div>
+            </div>
+            <p>Email field is empty</p>
           </form>
         </div>
 
@@ -65,6 +61,7 @@
       :root {
         --pink: hsl(0, 36%, 70%);
         --red: hsl(0, 93%, 68%);
+        --gray: hsl(0, 6%, 24%)
 
         --white-gradient: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%);
         --pink-gradient: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
@@ -163,10 +160,44 @@
       }
 
       .form {
+        &.invalid {
+          .form__error-icon {
+            opacity: 1;
+          }
+          p {
+            opacity: 1;
+          }
+        }
+
+        p {
+          padding-left: 24px;
+          margin-top: 8px;
+          color: var(--red);
+
+          opacity: 0;
+          transition: opacity .25s ease;
+        }
+      }
+
+      .form__inner {
         display: flex;
         width: 100%;
 
         position: relative;
+      }
+
+      .form__absolute {
+        position: absolute;
+        right: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .form__error-icon {
+        opacity: 0;
+
+        transition: opacity .25s ease;
       }
 
       .btn {
@@ -177,24 +208,51 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        position: absolute;
-        right: 0;
       }
 
       .input-mail {
         border: 1px solid var(--pink);
-        color: var(--pink);
+        color: var(--gray);
         margin: 0;
         border-radius: 99px;
         width: calc(100% + 39px);
         padding: 0 100px 0 24px;
         height: 44px;
 
+        font-size: 1rem;
+
         &::placeholder {
           color: var(--pink);
         }
       }
     </style>
+
+    <script>
+      const btn = document.querySelector(".btn")
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        validateForm();
+      })
+      
+      const validateForm = () => {
+        const form = document.querySelector(".form")
+        const input = form.querySelector(".input-mail")
+        const message = form.querySelector(".form p") 
+
+        if (!input.value) {
+          form.classList.add("invalid")
+          return
+        }
+
+        if (input.value && !validateEmail(input.value)) {
+          form.classList.add("invalid")
+          message.innerHTML = "Please provide a valid email"
+        }
+      }
+      
+      const validateEmail = (email) => {
+        return email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+      }
+    </script>
   </body>
 </html>
