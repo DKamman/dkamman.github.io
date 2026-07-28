@@ -7,71 +7,323 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Recipe page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Simple Omelette Recipe
+  <main>
 
-  An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
-  to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+    <div class="container">
+      <article class="page">
 
-  Preparation time
+        <section class="hero">
+          <figure class="hero__image-wrapper">
+            <img src="assets/images/image-omelette.jpeg" alt="Omelette Hero Image" class="hero__image">
+          </figure>
+        </section>
 
-  Total: Approximately 10 minutes
-  Preparation: 5 minutes
-  Cooking: 5 minutes
+        <section class="intro">
+          <h1>
+            Simple Omelette Recipe
+          </h1>
 
-  Ingredients
+          <p>
+            An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+          </p>
+        </section>
 
-  2-3 large eggs
-  Salt, to taste
-  Pepper, to taste
-  1 tablespoon of butter or oil
-  Optional fillings: cheese, diced vegetables, cooked meats, herbs
+        <section class="highlight">
+          <h3>
+            Preparation time
+          </h3>
+          <ul>
+            <li>
+              <strong>Total:</strong> Approximately 10 minutes
+            </li>
+            <li>
+              <strong>Preparation:</strong> 5 minutes
+            </li>
+            <li>
+              <strong>Cooking:</strong> 5 minutes
+            </li>
+          </ul>
+        </section>
 
-  Instructions
+        <section class="ingredients">
+          <h2>
+            Ingredients
+          </h2>
+          <ul>
+            <li>
+              2-3 large eggs
 
-  Beat the eggs: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
-  You can add a tablespoon of water or milk for a fluffier texture.
+            </li>
+            <li>
+              Salt, to taste
+            </li>
+            <li>
+              Pepper, to taste
+            </li>
+            <li>
+              1 tablespoon of butter or oil
+            </li>
+            <li>
+              Optional fillings: cheese, diced vegetables, cooked meats, herbs
+            </li>
+          </ul>
+        </section>
 
-  Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil.
+        <section class="instructions">
+          <h2>
+            Instructions
+          </h2>
+          <ol>
+            <li>
+              <strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.
+            </li>
+            <li>
+              <strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.
+            </li>
+            <li>
+              <strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.
+            </li>
+            <li>
+              <strong>Add fillings (optional):</strong> When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.
+            </li>
+            <li>
+              <strong>Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.
+            </li>
+            <li>
+               <strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.
+            </li>
+          </ol>
+        </section>
 
-  Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
-  the eggs evenly coat the surface.
+        <section class="nutrition">
+          <h2>
+            Nutrition
+          </h2>
+          <p class="nutrition__description">
+            The table below shows nutritional values per serving without the additional fillings.
+          </p>
 
-  Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the 
-  middle, sprinkle your chosen fillings over one half of the omelette.
+          <div class="nutrition__table">
+            <div class="nutrition__row">
+              <p>Calories</p>
+              <strong>277kcal</strong>
+            </div>
+            <div class="nutrition__row">
+              <p>Carbs</p>
+              <strong>0g</strong>
+            </div>
+            <div class="nutrition__row">
+              <p>Protein</p>
+              <strong>20g</strong>
+            </div>
+            <div class="nutrition__row">
+              <p> Fat</p>
+              <strong>22g</strong>
+            </div>
+          </div>  
 
-  Fold and serve: As the omelette continues to cook, carefully lift one edge and fold it over the 
-  fillings. Let it cook for another minute, then slide it onto a plate.
+        </section>
+      </article>
 
-  Enjoy: Serve hot, with additional salt and pepper if needed.
+    </div>
 
-  Nutrition
+  </main>
 
-  The table below shows nutritional values per serving without the additional fillings.
-
-  Calories
-  277kcal
-
-  Carbs
-  0g
-
-  Protein
-  20g
-
-  Fat
-  22g
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Danny Kamman</a>.
   </footer>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+    :root {
+      --white: hsl(0, 0%, 100%);
+
+      --stone-100: hsl(30, 54%, 90%);
+      --stone-150: hsl(30, 18%, 87%);
+      --stone-600: hsl(30, 10%, 34%);
+      --stone-900: hsl(24, 5%, 18%);
+
+      --brown-800: hsl(14, 45%, 36%);
+
+      --rose-50: hsl(330, 100%, 98%);
+      --rose-800: hsl(332, 51%, 32%);
+
+      --attribution-link: hsl(228, 45%, 44%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Outfit", "sans-serif";
+    }
+
+    html {
+      font-size: 1rem;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      color: var(--stone-900);
+    }
+    
+    h1, h2 {
+      font-family: "Young Serif", "sans-serif";
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      color: var(--brown-800);
+    }
+    
+    h3 {
+      color: var(--rose-800);
+    }
+
+    ul, ol {
+      margin-left: 16px;
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;  
+
+      li {
+        padding-left: 16px;
+        color: var(--stone-600);
+
+        &::marker {
+          font-size: .8rem;
+        }
+      }
+    }
+
+    ol {
+      margin-left: 24px;
+    
+        li::marker {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--brown-800);
+      }
+    }
+
+    main {
+      background-color: var(--stone-100);
+      padding: 10rem 0;
+    }
+
+    section {
+      margin-top: 32px;
+    }
+
+    .container {
+      max-width: 768px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page {
+      padding: 40px;
+      background-color: var(--white);
+      border-radius: 32px;
+    }
+
+    .hero {
+      margin: 0;
+    }
+
+    .hero__image-wrapper {
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .hero__image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .intro {
+      p {
+        margin-top: 16px;
+        color: var(--stone-600);
+      }
+    }
+
+    .highlight {
+      padding: 24px;
+      border-radius: 16px;
+      background-color: var(--rose-50);
+
+      ul {
+        li {
+          &::marker {
+            color: var(--rose-800);
+          }
+        }
+      }
+    }
+
+    .ingredients {
+      ul {
+        li {
+          &::marker {
+            color: var(--brown-800);
+          }
+        }
+      }
+    }
+
+    .instructions, .nutrition {
+      border-top: 1px solid var(--stone-150);
+      padding-top: 24px;
+    }
+
+    .nutrition__description {
+      margin-top: 16px;
+      color: var(--stone-600);
+    }
+
+    .nutrition__table {
+      margin-top: 16px;
+    }
+
+    .nutrition__row {
+      display: flex;
+      justify-content: space-between;
+      color: var(--stone-600);
+
+      p {
+        padding: 16px 0px 16px 28px;
+        width: 50%;
+        
+        border-bottom: 1px solid var(--stone-150);
+      }
+
+      strong {
+        width: 50%;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--stone-150);
+        color: var(--brown-800);
+      }
+    }
+
+    .attribution { 
+      font-size: 0.6875rem; 
+      text-align: center; 
+    }
+    .attribution a { 
+      color: var(--attribution-link)
+    }
+  </style>
 </body>
 </html>
