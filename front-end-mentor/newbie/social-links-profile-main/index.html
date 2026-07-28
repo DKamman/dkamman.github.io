@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Social links profile</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main>
+
+    <article class="socials">
+      <div class="socials__top">
+        <figure class="socials__image-wrapper">
+          <img src="assets/images/avatar-jessica.jpeg" alt="Jessica's Profile Photo" class="socials__image">
+        </figure>
+        <h1 class="socials__name">
+          Jessica Randall
+        </h1>
+        <h3 class="socials__location">
+          London, United Kingdom
+        </h3>
+        <p class="socials__description">
+          "Front-end developer and avid reader."
+        </p>
+      </div>
+
+      <nav class="socials__links">
+        <ul>
+          <li>
+            <a href="#" aria-label="Github" class="socials__link">GitHub</a>
+          </li>
+          <li>
+            <a href="#" aria-label="Frontend Mentor" class="socials__link">Frontend Mentor</a>
+          </li>
+          <li>
+            <a href="#" aria-label="LinkedIn" class="socials__link">LinkedIn</a>
+          </li>
+          <li>
+            <a href="#" aria-label="Twitter" class="socials__link">Twitter</a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram" class="socials__link">Instagram</a>
+          </li>
+        </ul>
+      </nav>
+
+    </article>
+
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    :root {
+      --green: hsl(75, 94%, 57%);
+      --white: hsl(0, 0%, 100%);
+      --grey-700: hsl(0, 0%, 20%);
+      --grey-800: hsl(0, 0%, 12%);
+      --grey-900: hsl(0, 0%, 8%);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Inter";
+      color: var(--white);
+    }
+
+    html {
+      font-size: 14px;
+    }
+
+    main {
+      height: 100vh;
+      min-height: 100vh;
+      max-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: var(--grey-900);
+    }
+
+    .socials {
+      background-color: var(--grey-800);
+      padding: 48px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 425px;
+    }
+
+    .socials__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .socials__image-wrapper {
+      width: 124px;
+      height: 124px;
+      overflow: hidden;
+      border-radius: 999px;
+    }
+    .socials__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .socials__name {
+      margin-top: 32px;
+    }
+
+    .socials__location {
+      color: var(--green);
+      margin-top: 10px;
+    }
+
+    .socials__description {
+      margin-top: 32px;
+    }
+
+    .socials__links {
+      margin-top: 32px;
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        li {
+          display: contents;
+        }
+      }
+    }
+
+    .socials__link {
+      background-color: var(--grey-700);
+      padding: 16px 32px;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+
+      white-space: nowrap;
+
+      transition: all .2s ease;
+
+      &:hover, &:focus-visible {
+        background-color: vaR(--green);
+        color: var(--grey-900);
+
+        outline: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .socials {
+        padding: 24px;
+      }
+    }
+  </style>
+</body>
+</html>
