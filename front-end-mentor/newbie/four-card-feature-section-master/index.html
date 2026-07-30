@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  
+  <main>
+    <div class="container">
+
+       <section class="four">
+
+        <header>
+          <hgroup>
+            <h1 class="four__title">
+              Reliable, efficient delivery<br>
+              <span>Powered by Technology</span>
+            </h1>
+            <h2 class="four__subtitle">
+              Our Artificial Intelligence powered tools use millions of project data points 
+              to ensure that your project is successful
+            </h2>
+          </hgroup>
+        </header>
+
+        <div class="four__grid">
+
+          <div class="four__grid-item four__grid-item--1">
+            <article>
+              <div class="four__grid-item--line"></div>
+                <div class="four__grid-item-inner">
+                <h3>Supervisor</h3>
+                <p>Monitors activity to identify project roadblocks</p>
+                <picture class="four__grid-item-image-wrapper">
+                  <img src="images/icon-supervisor.svg" alt="Supervisor icon">
+                </picture>
+              </div>
+            </article>
+          </div>
+
+          <div class="four__grid-item four__grid-item--2">
+            <article>
+              <div class="four__grid-item--line"></div>
+                <div class="four__grid-item-inner">
+                <h3>Team Builder</h3>
+                <p>Scans our talent network to create the optimal team for your project</p>
+                <picture class="four__grid-item-image-wrapper">
+                  <img src="images/icon-team-builder.svg" alt="Supervisor icon">
+                </picture>
+              </div>
+            </article>
+          </div>
+
+          <div class="four__grid-item four__grid-item--3">
+            <article>
+              <div class="four__grid-item--line"></div>
+                <div class="four__grid-item-inner">
+                <h3>Karma</h3>
+                <p>Regularly evaluates our talent to ensure quality</p>
+                <picture class="four__grid-item-image-wrapper">
+                  <img src="images/icon-karma.svg" alt="Supervisor icon">
+                </picture>
+              </div>
+            </article>
+          </div>
+
+          <div class="four__grid-item four__grid-item--4">
+            <article>
+              <div class="four__grid-item--line"></div>
+              <div class="four__grid-item-inner">
+                <h3>Calculator</h3>
+                <p>Uses data from past projects to provide better delivery estimates</p>
+                <picture class="four__grid-item-image-wrapper">
+                  <img src="images//icon-calculator.svg" alt="Supervisor icon">
+                </picture>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+       </section> 
+
+    </div>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Danny Kamman</a>.
+  </footer>
+  
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      :root {
+        /* Primary */
+        --red: hsl(0, 78%, 62%);
+        --cyan: hsl(180, 62%, 55%);
+        --orange: hsl(34, 97%, 64%);
+        --blue: hsl(212, 86%, 64%);
+
+        /* Neutral */
+        --grey-500: hsl(234, 12%, 34%);
+        --grey-400: hsl(212, 6%, 44%);
+        --white: hsl(0, 0%, 100%);
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+        color: var(--grey-500);
+      }
+
+      .container {
+        width: 85%;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      main {
+        min-height: 100svh;
+      }
+
+      .four {
+        margin: 5.6rem 0;
+      }
+
+      .four__title, .four__subtitle {
+        text-align: center;
+      }
+
+      .four__title {
+        font-weight: 200;
+        font-size: 2.6rem;
+
+        span {
+          font-weight: 600;
+        }
+      }
+
+      .four__subtitle {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+
+      .four__grid {
+        margin-top: 4.8rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 3.2rem;
+      }
+
+      .four__grid-item article {
+        border-radius: 0.8rem;
+        overflow: hidden;
+        box-shadow: 0px 10px 20px 0px rgba(0 0 0 / 0.1);
+      }
+
+      .four__grid-item-inner {
+        padding: 3.2rem;
+        padding-bottom: 4.8rem;
+      }
+
+      .four__grid-item-inner h3 {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      .four__grid-item-inner p {
+        margin-top: 0.4rem;
+      }
+
+      .four__grid-item--line {
+        height: 4px;
+        width: 100%;
+        background-color: var(--cyan);
+      }
+      .four__grid-item--2 .four__grid-item--line {
+        background-color: var(--red);
+      }
+      .four__grid-item--3 .four__grid-item--line {
+        background-color: var(--orange);
+      }
+      .four__grid-item--2 .four__grid-item--line {
+        background-color: var(--blue);
+      }
+
+      .four__grid-item-image-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 2.4rem;
+        margin-top: auto;
+      }
+
+      @media (min-width: 38em) {
+        .four__grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .four__grid-item article, .four__grid-item-inner {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      @media (min-width: 80em) {
+        .four__title {
+          font-size: 3.2rem;
+        }
+        .four__subtitle {
+          max-width: 50rem;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .four__grid {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(4, 1fr);
+          margin-top: 8rem;
+        }
+
+        .four__grid-item article {
+          aspect-ratio: 4/3;
+        }
+
+        .four__grid-item--1 {
+          grid-column: 1;
+          grid-row: 2/ span 2;
+        }
+        .four__grid-item--2 {
+          grid-column: 2;
+          grid-row: span 2;
+        }
+        .four__grid-item--3 {
+          grid-column: 2;
+          grid-row: 3 / span 2;
+        }
+        .four__grid-item--4 {
+          grid-column: 3;
+          grid-row: 2 / span 2;
+        }
+      }
+
+    </style>
+</body>
+</html>
